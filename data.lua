@@ -58,9 +58,9 @@ local function sound(name)
   return '__eradicators-hand-crank-generator__/sound/'..name
   end
 
- 
 
--- To add new prototypes to the game I descripe each prototype in a table.
+
+-- To add new prototypes to the game I describe each prototype in a table.
 -- Then each of these tables is put together into one large table, and that large
 -- table is handed to data:extend() which will put it into data.raw where
 -- the game engine can find them.
