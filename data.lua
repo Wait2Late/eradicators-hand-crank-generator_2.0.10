@@ -78,13 +78,13 @@ data:extend({
     -- Linked hotkeys must define an empty key_sequence.
     linked_game_control = 'rotate'          ,
     key_sequence        = ''                ,
-    
+  
     -- Here I could block other mods or even vanilla from
     -- using the same hotkey, but as i'm linking to another
     -- hotkey i'm not doing that. Assigning "nil" in lua
     -- deletes the value, so this line has the same effect as
     -- writing nothing at all.
-    consuming           =  nil              , 
+    consuming           =  nil              ,
 
     -- Properties that have a known default value do not have to be
     -- specified. The engine will automatically assign the
@@ -125,9 +125,9 @@ data:extend({
     },
 
   })
-  
 
-  
+
+
 -- The next step is slightly more complicated. According to the "lore" of this
 -- mod the player only gets a single HCG. But because some people might want
 -- more than one there is a "mod setting" that enables a technology and recipe.
@@ -165,7 +165,7 @@ if config 'recipe-enabled' then data:extend({
       result = 'er:hcg-item',
       
       -- Recipes always produce one item if nothing else is defined.
-      -- result_count = 1,
+      -- result_count = 1, --TODO use this one
 
       -- This is the TIME in seconds at crafting speed 1 to craft the item.
       -- So handcrafting a HCG will take 30 seconds, and an assembling-machine-1
@@ -246,17 +246,17 @@ if config 'recipe-enabled' then data:extend({
           },
         time = 30,
         },
-        
+
       -- }, -- [1] put parameters directly into prototype
-    
+
     order = "c-e-b2",
     },
 
   }) end -- this is the "end" of the mod-setting check
 
-  
 
-  
+
+
 -- Sometimes it's nessecary to prepare data outside of a prototype definition.
 -- Because the HCG should be connectable to the circuit network the engine needs
 -- to know where the cables should go.
@@ -347,7 +347,7 @@ data:extend{{
       -- Sometimes it's useful to hide the "missing cable" and "no power" icons.
       -- But I don't need that for HCG.
       -- render_no_network_icon = false,
-      -- render_no_power_icon   = false,    
+      -- render_no_power_icon   = false,
       },
       
     --Vanilla factorio comes with some predefined sound groups for
@@ -441,7 +441,7 @@ data:extend{{
   }}
 
 
--- Congratulations. You have finished the data statge tutorial!
+-- Congratulations. You have finished the data stage tutorial!
   
 
 
