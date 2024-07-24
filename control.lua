@@ -1,7 +1,7 @@
 
 --[[
 
-  Hello!
+  Hello! 
   
   The control stage of this tutorial mod is going to demonstrate the following things:
     
